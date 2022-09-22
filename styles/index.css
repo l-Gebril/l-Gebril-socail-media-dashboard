@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: min(1200px, 100%);
+}
+.dark-icon {
+  @apply w-[45px] h-[25px] bg-gradient-to-r from-blue-500 to-green-400 rounded-[20px] relative cursor-pointer;
+}
+.dark-icon span {
+  @apply w-[20px] h-[20px] rounded-[50%] bg-bg-default dark:bg-dark_bg-default absolute right-[2.5px] dark:left-[2.5px] top-[50%] translate-y-[-50%] transition-all;
+}
+.text-color {
+  @apply text-text-l_s_dark_blue dark:text-text-d_s_white;
+}
+.bg {
+  @apply bg-bg-default dark:bg-dark_bg-default;
+}
+.bg-header {
+  @apply bg-bg-header dark:bg-dark_bg-header;
+}
+
+.flex-center {
+  @apply flex items-center justify-center gap-1;
+}
+
+.flex-between {
+  @apply flex items-center justify-between gap-1;
+}
+
+.cards-container {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-6 mb-10;
+}
+
+.card {
+  @apply bg-bg-card hover:bg-bg-card_hover dark:bg-dark_bg-card dark:hover:bg-dark_bg-card_hover text-center py-6 rounded relative overflow-hidden before:content-[""] before:absolute before:top-0 before:left-0 before:w-full before:h-1 transition-all cursor-pointer;
+}
+.card .container {
+  padding: 0 2rem;
+}
+
+.card .username {
+  @apply flex items-center justify-center gap-1 font-bold pb-6;
+}
+
+.card .val {
+  @apply text-text-l_s_dark_blue dark:text-text-d_s_white font-bold;
+}
+
+.card .stat-type {
+  @apply font-medium uppercase tracking-[0.3rem] pb-6;
+}
+
+.abbr {
+  @apply text-sm text-center font-[500] bg-header text-color py-3 w-full;
+}
+.abbr a {
+  @apply text-youtube;
+}
